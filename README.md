@@ -9,7 +9,11 @@ CollectionView에는 두 가지 종류가 있다.
 
 #### 1. UICollectionViewFlowLayout
 
-<img width="600" alt="스크린샷 2023-07-05 오후 5 54 50" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fy2gIa%2Fbtq4bP9tXV3%2FeYEkHDY1UKjzqUUMtkiGWK%2Fimg.png">
+이 CollectionViewLayout은 셀을 현재 행에서 채워나가되, 화면의 공간이 부족해지면 새로운 행을 생성해서 셀들을 추가하는 방식이다. 
+
+
+<img width="650" alt="스크린샷 2023-07-05 오후 5 54 50" src="https://github.com/Marigoldflower/CollectionView_CompositionLayout_Practice/assets/100112897/7a9b5f4a-8c47-48f8-bbaf-bb9903addb2d"> 
+
 
 
 
