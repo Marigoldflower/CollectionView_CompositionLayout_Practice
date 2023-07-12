@@ -7,10 +7,13 @@
 
 CollectionView에는 두 가지 종류가 있다. 
 
-#### 1. UICollectionViewFlowLayout**
+#### 1. UICollectionViewFlowLayout
+
+<img width="373" alt="스크린샷 2023-07-05 오후 5 54 50" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fy2gIa%2Fbtq4bP9tXV3%2FeYEkHDY1UKjzqUUMtkiGWK%2Fimg.png">
 
 
-#### 2. UICollectionViewCompositionalLayout**
+
+#### 2. UICollectionViewCompositionalLayout
 
 
 
