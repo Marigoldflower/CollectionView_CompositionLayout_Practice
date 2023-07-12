@@ -14,6 +14,11 @@ CollectionView에는 두 가지 종류가 있다.
 
 <img width="650" alt="스크린샷 2023-07-05 오후 5 54 50" src="https://github.com/Marigoldflower/CollectionView_CompositionLayout_Practice/assets/100112897/7a9b5f4a-8c47-48f8-bbaf-bb9903addb2d"> 
 
+<br>
+
+위의 그림처럼 스크롤의 방향에 따라 최대한 많은 셀들을 배치한 후, 화면에 다 채우지 못하면 다음 행으로 넘어가 셀들을 추가한다. 
+
+
 
 
 
