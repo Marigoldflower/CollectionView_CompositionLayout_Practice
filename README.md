@@ -7,10 +7,10 @@
 
 CollectionView에는 두 가지 종류가 있다. 
 
-**1. UICollectionViewFlowLayout**
+#### 1. UICollectionViewFlowLayout**
 
 
-**2. UICollectionViewCompositionalLayout**
+#### 2. UICollectionViewCompositionalLayout**
 
 
 
