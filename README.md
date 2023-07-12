@@ -1,13 +1,11 @@
 # CollectionView_CompositionLayout_Practice
 <br>
 
-### TableView 사용의 장점  
+### CollectionView의 종류
 
 ------------
 
-우선 TableView는 테이블 뷰 셀을 재사용하여, 보여줘야 할 데이터의 구조를 "재활용"하는 방식을 사용한다.  
-이는 TableView의 굉장히 큰 장점인데, 데이터가 엄청나게 많아도  
-TableView는 화면을 채울만큼만 인스턴스를 생성하기에 메모리 용량 걱정을 하지 않아도 되기 때문이다.   
+Collec  
 
 
 ### TableView 사용의 단점  
