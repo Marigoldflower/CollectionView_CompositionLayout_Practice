@@ -1,0 +1,6 @@
+framework module Pods_CollectionView_CompositionLayout_Practice {
+  umbrella header "Pods-CollectionView_CompositionLayout_Practice-umbrella.h"
+
+  export *
+  module * { export * }
+}
