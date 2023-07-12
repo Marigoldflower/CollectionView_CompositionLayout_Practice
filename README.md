@@ -1,11 +1,17 @@
 # CollectionView_CompositionLayout_Practice
 <br>
 
-### CollectionView의 종류
+### CollectionViewLayout의 종류
 
 ------------
 
-Collec  
+CollectionView에는 두 가지 종류가 있다. 
+
+**1. UICollectionViewFlowLayout**
+
+
+**2. UICollectionViewCompositionalLayout**
+
 
 
 ### TableView 사용의 단점  
