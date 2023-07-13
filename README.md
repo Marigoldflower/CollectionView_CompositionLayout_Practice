@@ -18,11 +18,26 @@ CollectionView에는 두 가지 종류가 있다.
 
 위의 그림처럼 스크롤의 방향에 따라 최대한 많은 셀들을 배치한 후, 화면에 다 채우지 못하면 다음 행으로 넘어가 셀들을 추가한다. 
 
+또한 CollectionViewFlowLayout은 두 가지 방법으로 컬렉션 뷰 셀의 width와 height를 정해줄 수 있다.
+
+1) itemSize
+
+<img width="650" alt="스크린샷 2023-07-12 오후 9 02 33" src="https://github.com/Marigoldflower/CollectionView_CompositionLayout_Practice/assets/100112897/4d211056-ebf3-4b6d-b677-32f9361441fe">
 
 
+2) UICollectionViewDelegateFlowLayout를 준수하여 메소드를 구현
 
+<img width="650" alt="스크린샷 2023-07-12 오후 9 07 19" src="https://github.com/Marigoldflower/CollectionView_CompositionLayout_Practice/assets/100112897/8653bee6-76e4-4930-ae13-4c029a2727dc">
+
+
+CollectionViewFlowLayout은 모든 셀에 대하여 width값과 height값을 정해주는 것으로, 어떤 특정 셀의 width값과 height값을 변경해주는 것은 불가능하다.
+(물론 width: 10 * Int.random(in: 5...10) , height: 10 * Int.random(in: 5...10) 이런 방식으로 각 셀의 크기를 다르게 해 줄 수는 있긴 하다.)
+
+<br>
 
 #### 2. UICollectionViewCompositionalLayout
+이 CollectionViewLayout은 
+
 
 
 
