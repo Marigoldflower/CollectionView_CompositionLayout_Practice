@@ -1,13 +1,13 @@
 # CollectionView_CompositionLayout_Practice
 <br>
 
-### CollectionViewLayout의 종류
+## CollectionViewLayout의 종류
 
 ------------
 
 CollectionView에는 두 가지 종류가 있다. 
 
-#### 1. UICollectionViewFlowLayout
+### 1. UICollectionViewFlowLayout
 
 이 CollectionViewLayout은 셀을 현재 행에서 채워나가되, 화면의 공간이 부족해지면 새로운 행을 생성해서 셀들을 추가하는 방식이다. 
 
@@ -41,7 +41,7 @@ CollectionViewFlowLayout은 모든 셀에 대하여 width값과 height값을 정
 
 <br>
 
-#### 📌 CollectionViewFlowLayout의 문제점 
+### 📌 CollectionViewFlowLayout의 문제점 
 
 현대적인 앱의 레이아웃은 정말 복잡하다. 각 레이아웃의 크기나 모양이 전부 다 다르며 일정하지 않다. 
 <br>
@@ -58,7 +58,7 @@ CompositionalFlowLayout은 이와 같은 레이아웃을 구성하기에 좋은 
 
 <br>
 
-#### 2. UICollectionViewCompositionalLayout
+### 2. UICollectionViewCompositionalLayout
 
 CollectionViewFlowLayout이 갖는 문제점을 해결하고자, iOS 13때 개발된 레이아웃이 바로 CollectionViewCompositionalLayout이다.
 <br>
