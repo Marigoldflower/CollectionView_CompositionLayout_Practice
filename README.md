@@ -136,7 +136,7 @@ Group을 생성할 때에는 두 가지 메소드로 또 나뉘게 된다.
 <br>
 
 
-##### <1> NSCollectionLayoutGroup.horizontal(layoutSize:repeatingSubitem:count)
+#### - NSCollectionLayoutGroup.horizontal(layoutSize:repeatingSubitem:count)
 
 1-1) layoutSize: 
 
@@ -161,7 +161,7 @@ Group의 전체 크기를 정해줄 수 있는 NSCollectionLayoutSize(widthDimen
 (layoustSize:repeatingSubitem:count:) 파라미터를 보통 사용하는 경우는 똑같은 Item들이 반복되어 나열되어야 할 때이다.
 
 	
-##### <2> NSCollectionLayoutGroup.horizontal(layoutSize:subitems:)
+#### - NSCollectionLayoutGroup.horizontal(layoutSize:subitems:)
 
 2-1) layoutSize: Group의 전체 크기를 정해줄 수 있는 NSCollectionLayoutSize(widthDimension:heightDimension:) 메소드가 들어가면 된다.
 
