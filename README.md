@@ -183,6 +183,7 @@ Group 내에 또다른 Group을 커스텀하여 넣고 싶을 때 사용한다.
 <br>
 	
 ⭐️⭐️ 이 두 메소드를 사용할 때 주의할 점 ⭐️⭐️
+
 "item들이 몇 개 들어가냐에 따라서 개발자가 ⭐️item⭐️의 .fractionalWidth를 조절해줘야 한다."
 <br>
 예를 들어 Group 내에 item을 두 개를 넣는다고 가정하면 
@@ -199,26 +200,54 @@ UICollectionViewCompositionalLayout에서 Group의 크기를 정하는 방법은
 <br>
 layoutSize에는 NSCollectionLayoutSize(widthDimension:heightDimension:) 메소드가 들어가면 된다.
 
-1-1) .absolute
+##### 1-1) .absolute
+
 NSCollectionLayoutSize(widthDimension: .absolute(10), heightDimension: .absolute(10))
+<br>
 이런 방식으로 사용하며 고정 크기를 의미한다.
+<br>
 즉, 우리가 원래 사용하듯이 width 10, height 10을 의미하는 것임.
 
-1-2) .estimated
+
+##### 1-2) .estimated
+
 NSCollectionLayoutSize(widthDimension: .estimated(10), heightDimension: .estimated(10))
+<br>
 이런 방식으로 사용하며 대략적인 크기를 의미한다.
+<br>
 예를 들어 width를 일단 10으로 정해놓았지만 상황에 따라서 컴파일러가 크기를 약간 조절할 수 있다는 의미다.	
 
-1-3) .fractional
+
+##### 1-3) .fractional
+
 NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.4), heightDimension: .fractionalHeight(0.7))
+<br>
 이런 방식으로 사용하며 비율로 크기를 조정한다.
+<br>
 0 에서 1까지의 비율이 있는데 "1은 Group이 화면을 꽉 채우는 것을 의미한다." ⭐️
+<br>
 예를 들어 fractionalWidth(1)은 Group의 가로를 꽉 채우는 것을 의미하며
+<br>
 fractionalWidth(0.3)은
+<br>
 "Group의 30%는 채우고 70%는 다른 Group으로 채우겠다는 의미이다."
 
+<br>
+
  
-3. section
+#### 3. section
+
+Group을 모두 합쳐놓은 구성요소. 만들어놓은 Group을 Section에 할당하고 
+<br>
+UICollectionViewCompositionalLayout을 리턴할 때 Section을 넘겨주면 된다.
+<br>
+NSCollectionLayoutSection(group:) 메소드를 통해서 이제껏 만든 group을 할당한다.
+
+<br>
+위의 모든 내용을 코드로 옮기면 다음과 같다.
+
+
+
 
 
 
