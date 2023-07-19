@@ -49,7 +49,9 @@ CollectionViewFlowLayout은 모든 셀에 대하여 width값과 height값을 정
 
 <img width="650" alt="스크린샷 2023-07-12 오후 9 07 19" src="https://github.com/Marigoldflower/CollectionView_CompositionLayout_Practice/assets/100112897/d2fe9407-a264-4063-835e-dbcf14b6b55b">
 <br>
-앱 스토어의 복잡한 레이아웃
+<div align="center">
+  앱 스토어의 복잡한 레이아웃
+</div>
 
 <br>
 
