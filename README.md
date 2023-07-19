@@ -256,32 +256,28 @@ NSCollectionLayoutSection(group:) 메소드를 통해서 이제껏 만든 group�
 1. 먼저 CollectionView를 메모리에 올린다. 이 때, CollectionViewLayout의 형태를 리턴값이 UICollectionViewCompositionalLayout인 메소드 makeCompositionalLayout()를 할당한다.
 <img width="639" alt="스크린샷 2023-07-05 오후 6 47 20" src="https://github.com/Marigoldflower/CollectionView_CompositionLayout_Practice/assets/100112897/f6bdb1ea-6209-44c1-a4fc-6b3d141ca282">  
 
-2. 스택 뷰를 올린다.
+2. Item 값을 설정
    
-<img width="639" alt="스크린샷 2023-07-05 오후 6 48 53" src="https://github.com/Marigoldflower/ScrollView_TableView_Difference_Practice/assets/100112897/5b9bb79f-f838-40cf-828c-b940c614eb29">  
+<img width="639" alt="스크린샷 2023-07-05 오후 6 48 53" src="https://github.com/Marigoldflower/CollectionView_CompositionLayout_Practice/assets/100112897/a25640f5-0f1b-4e3a-8adb-d8b4903a3b83">  
 
-3. 스크롤 뷰 생성
 
-<img width="639" alt="스크린샷 2023-07-05 오후 6 48 53" src="https://github.com/Marigoldflower/ScrollView_TableView_Difference_Practice/assets/100112897/3a92661b-a047-4bfb-ba2e-996efa8deb73">
+3. Group 값 설정
 
-4. 제약 걸기.  
+<img width="639" alt="스크린샷 2023-07-05 오후 6 48 53" src="https://github.com/Marigoldflower/CollectionView_CompositionLayout_Practice/assets/100112897/1a290c62-8b54-4b5e-acd4-b5e73665eef6">
 
-<img width="639" alt="스크린샷 2023-07-05 오후 6 48 53" src="https://github.com/Marigoldflower/ScrollView_TableView_Difference_Practice/assets/100112897/94c6882c-e4f2-40e8-b482-c2bb84c75f35">  
 
-5. 그 후 아까 만들어 놓았던 UIView들을 스택 뷰에 차례대로 채워 넣으면 된다.
+4. Section과 Return 값을 마지막으로 설정해준다. 
 
-<img width="639" alt="스크린샷 2023-07-05 오후 6 56 42" src="https://github.com/Marigoldflower/ScrollView_TableView_Difference_Practice/assets/100112897/8015f73d-600a-4e5b-86c1-cfd2d305f67b">
+<img width="639" alt="스크린샷 2023-07-05 오후 6 48 53" src="https://github.com/Marigoldflower/CollectionView_CompositionLayout_Practice/assets/100112897/292319c9-a71e-4f9e-9675-f7ea11cded01">
 
+<br>
 
 
 
 ## 결과물 
 ------------
-<img src="https://github.com/Marigoldflower/ScrollView_TableView_Difference_Practice/assets/100112897/959641c2-a59c-4b62-ba77-748aa99358ad" width="400" height="800"/>      
+<img src="https://github.com/Marigoldflower/CollectionView_CompositionLayout_Practice/assets/100112897/7e00f83d-4dca-4b35-b01b-126bfb39f3e1" width="400" height="800"/>      
 
-
-정리하자면 **재사용셀을 사용해야 하거나** **받아야할 데이터가 너무 많을 때**엔 **TableView를 사용**하고  
-**재사용셀을 사용하지 않고 서로 다른 여러 객체들을 띄워야 할 때**에는 **ScrollView + StackView 조합을 사용**하면 된다. 
 
 
 ------------
