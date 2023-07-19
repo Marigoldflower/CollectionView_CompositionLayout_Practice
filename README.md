@@ -136,19 +136,26 @@ Group을 생성할 때에는 두 가지 메소드로 또 나뉘게 된다.
 <br>
 
 
-1) NSCollectionLayoutGroup.horizontal(layoutSize:repeatingSubitem:count)
-	1-1) layoutSize: Group의 전체 크기를 정해줄 수 있는 
-	NSCollectionLayoutSize(widthDimension:heightDimension:) 메소드가 들어가면 된다.
-	1-2) subitem: 어떤 item이 들어갈 것인지. 보통 위에서 만들어 놓은 item을 여기에 할당한다.
-	한 Group 내에 몇 개의 item이 들어가는지에 따라서 subitem의 .fractional 영역을 조절해줘야 한다.
-  1-3) count: 몇 개의 item이 들어갈 것인지. 
-	예를 들어 4이라고 적으면 item 4개가 한 Group 안에 들어가게 된다.
-  따라서 한 Group 내에 Item 4개가 다 들어갈 수 있도록 
-  개발자가 임의로 Item들의 .fractional 영역을 조절해줘야 한다.
-	repeatingSubitem: count: 파라미터를 보통 사용하는 경우는 
-	똑같은 Item들이 반복되어 나열되어야 할 때 사용한다.
+##### <1> NSCollectionLayoutGroup.horizontal(layoutSize:repeatingSubitem:count)
+
+1-1) layoutSize: Group의 전체 크기를 정해줄 수 있는 NSCollectionLayoutSize(widthDimension:heightDimension:) 메소드가 들어가면 된다.
+
+
+1-2) subitem: 어떤 item이 들어갈 것인지. 보통 위에서 만들어 놓은 item을 여기에 할당한다.
+<br>
+한 Group 내에 몇 개의 item이 들어가는지에 따라서 subitem의 .fractional 영역을 조절해줘야 한다.
+
+
+1-3) count: 몇 개의 item이 들어갈 것인지. 
+<br>
+예를 들어 4이라고 적으면 item 4개가 한 Group 안에 들어가게 된다.
+<br>
+따라서 한 Group 내에 Item 4개가 다 들어갈 수 있도록 개발자가 임의로 Item들의 .fractional 영역을 조절해줘야 한다.
+<br>
+(layoustSize:repeatingSubitem:count:) 파라미터를 보통 사용하는 경우는 똑같은 Item들이 반복되어 나열되어야 할 때이다.
+
 	
-2) NSCollectionLayoutGroup.horizontal(layoutSize:subitems:)
+##### <2> NSCollectionLayoutGroup.horizontal(layoutSize:subitems:)
 	2-1) layoutSize: Group의 전체 크기를 정해줄 수 있는 
 	NSCollectionLayoutSize(widthDimension:heightDimension:) 메소드가 들어가면 된다.
 	2-2) subitems: 어떤 item이 들어갈 것인지. 이건 똑같다.
