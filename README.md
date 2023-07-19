@@ -33,6 +33,7 @@ CollectionView에는 두 가지 종류가 있다.
 CollectionViewFlowLayout은 모든 셀에 대하여 width값과 height값을 정해주는 것으로, 
 <br>
 어떤 특정 셀의 width값과 height값만 다르게 지정하는 것은 불가능하다.
+<br>
 (물론 width: 10 * Int.random(in: 5...10) , height: 10 * Int.random(in: 5...10) 이런 방식으로 각 셀의 크기를 다르게 해 줄 수는 있긴 하다.)
 
 
