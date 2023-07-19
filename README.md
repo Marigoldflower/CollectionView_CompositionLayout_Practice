@@ -60,7 +60,7 @@ CompositionalFlowLayout은 이와 같은 레이아웃을 구성하기에 좋은 
 
 #### 2. UICollectionViewCompositionalLayout
 
-이 CollectionView는 복잡한 레이아웃을 구성할 때에 
+위에서 앱 스토어 에시를 다뤘듯이, 이 레이아웃은 복잡한 섹션 구성을 
 
 
 
