@@ -41,7 +41,7 @@ CollectionViewFlowLayout은 모든 셀에 대하여 width값과 height값을 정
 
 
 
-### TableView 사용의 단점  
+## TableView 사용의 단점  
 
 ------------
 
@@ -70,7 +70,7 @@ TableView는 사용했던 셀을 다시 재사용하기 때문에 셀의 형태�
 
 
 
-### ScrollView와 StackView의 조합
+## ScrollView와 StackView의 조합
 
 ------------
 
