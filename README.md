@@ -73,7 +73,7 @@ CollectionViewFlowLayout이 갖는 문제점을 해결하고자, iOS 13때 개�
 위와 같은 복잡한 레이아웃을 구성하기 위해서 CollectionViewCompositionalLayout은 다음과 같이 구성되어 있다. 
 <br>
 
-##### 1. item: 컬렉션 뷰를 이룰 때 쓰이는 한 개의 구성요소.
+#### 1. item: 컬렉션 뷰를 이룰 때 쓰이는 한 개의 구성요소.
 <br>
 UICollectionViewCompositionalLayout에서 Item의 크기를 정하는 방법은 세 가지이며
 <br>
@@ -84,7 +84,7 @@ layoutSize에는 각각의 Item의 크기를 정해줄 수 있는 NSCollectionLa
 <br>
 <br>
 
-###### 1-1) .absolute:
+##### 1-1) .absolute:
 
 NSCollectionLayoutSize(widthDimension: .absolute(10), heightDimension: .absolute(10))
 <br>
@@ -92,7 +92,7 @@ NSCollectionLayoutSize(widthDimension: .absolute(10), heightDimension: .absolute
 <br>
 즉, 우리가 원래 사용하듯이 width 10, height 10을 의미하는 것임.
 
-###### 1-2) .estimated:
+##### 1-2) .estimated:
 
 NSCollectionLayoutSize(widthDimension: .estimated(10), heightDimension: .estimated(10))
 <br>
@@ -100,7 +100,7 @@ NSCollectionLayoutSize(widthDimension: .estimated(10), heightDimension: .estimat
 <br>
 예를 들어 width를 일단 10으로 정해놓았지만 상황에 따라서 컴파일러가 크기를 약간 조절할 수 있다는 의미다.	
 
-###### 1-3) .fractional:
+##### 1-3) .fractional:
 
 
 NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.4), heightDimension: .fractionalHeight(0.7))
@@ -121,7 +121,7 @@ fractionalWidth(0.3)은 "Item의 30%만 이미지 화면이 나오고 70%는 흰
 	
 
 
-##### 2. group: Item을 모두 합쳐놓은 구성요소. 
+#### 2. group: Item을 모두 합쳐놓은 구성요소. 
 <br>
 즉, Group은 여러 개의 Item들을 담고 있는 그릇이라고 생각하면 된다.
 <br>
