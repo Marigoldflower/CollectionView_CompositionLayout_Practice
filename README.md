@@ -73,20 +73,23 @@ CollectionViewFlowLayout이 갖는 문제점을 해결하고자, iOS 13때 개�
 위와 같은 복잡한 레이아웃을 구성하기 위해서 CollectionViewCompositionalLayout은 다음과 같이 구성되어 있다. 
 <br>
 
-1. item:
-   
-컬렉션 뷰를 이룰 때 쓰이는 한 개의 구성요소.
+1. item: 컬렉션 뷰를 이룰 때 쓰이는 한 개의 구성요소.
 <br>
 UICollectionViewCompositionalLayout에서 Item의 크기를 정하는 방법은 세 가지이며
 <br>
-Item을 생성할 때에는 NSCollectionLayoutItem(layoutSize:) 메소드를 사용한다.
+Item을 생성할 때에는 **NSCollectionLayoutItem(layoutSize:)** 메소드를 사용한다.
 <br>
 layoutSize에는 각각의 Item의 크기를 정해줄 수 있는 NSCollectionLayoutSize(widthDimension:heightDimension:) 메소드가 들어가면 된다.
 
-1-1) .absolute
-	NSCollectionLayoutSize(widthDimension: .absolute(10), heightDimension: .absolute(10))
-	이런 방식으로 사용하며 고정 크기를 의미한다.
-	즉, 우리가 원래 사용하듯이 width 10, height 10을 의미하는 것임.
+<br>
+
+1-1) .absolute:
+
+NSCollectionLayoutSize(widthDimension: .absolute(10), heightDimension: .absolute(10))
+<br>
+이런 방식으로 사용하며 고정 크기를 의미한다.
+<br>
+즉, 우리가 원래 사용하듯이 width 10, height 10을 의미하는 것임.
 
 1-2) .estimated
 	NSCollectionLayoutSize(widthDimension: .estimated(10), heightDimension: .estimated(10))
