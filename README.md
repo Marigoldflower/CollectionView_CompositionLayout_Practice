@@ -6,7 +6,7 @@
 ------------
 
 CollectionView에는 두 가지 종류가 있다. 
-
+ 
 ### 1. UICollectionViewFlowLayout
 
 이 CollectionViewLayout은 셀을 현재 행에서 채워나가되, 화면의 공간이 부족해지면 새로운 행을 생성해서 셀들을 추가하는 방식이다. 
