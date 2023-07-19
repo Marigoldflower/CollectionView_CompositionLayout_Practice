@@ -82,6 +82,7 @@ Item을 생성할 때에는 **NSCollectionLayoutItem(layoutSize:)** 메소드를
 layoutSize에는 각각의 Item의 크기를 정해줄 수 있는 NSCollectionLayoutSize(widthDimension:heightDimension:) 메소드가 들어가면 된다.
 
 <br>
+<br>
 
 1-1) .absolute:
 
