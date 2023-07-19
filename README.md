@@ -38,15 +38,28 @@ CollectionViewFlowLayout은 모든 셀에 대하여 width값과 height값을 정
 
 <br>
 
+##### CollectionViewFlowLayout의 문제점 
+현대적인 앱의 레이아웃은 정말 복잡하다. 각 레이아웃의 크기나 모양이 전부 다 다르며 일정하지 않다. 
+앱 스토어 레이아웃과 같은 레이아웃을 보면 레이아웃의 구성이 전부 다 다른 것을 확인할 수 있다. 
+
+<img width="650" alt="스크린샷 2023-07-12 오후 9 07 19" src="https://github.com/Marigoldflower/CollectionView_CompositionLayout_Practice/assets/100112897/d2fe9407-a264-4063-835e-dbcf14b6b55b">
+<br>
+앱 스토어의 복잡한 레이아웃
+
+<br>
+
+CompositionalFlowLayout은 이와 같은 레이아웃을 구성하기에 좋은 선택지는 아니다. 
+
+
+<br>
+
 #### 2. UICollectionViewCompositionalLayout
 
-
+이 CollectionView는 복잡한 레이아웃을 구성할 때에 
 
 
 
 ![CompositionalLayoutExample](https://github.com/Marigoldflower/CollectionView_CompositionLayout_Practice/assets/100112897/5eebf48e-8822-43db-b209-39414180084f)
-
-
 
 
 
@@ -122,7 +135,8 @@ ScrollView와 StackView를 조합하여 TableView와 같이 세로로 스크롤�
 
 ## 출처 
 
-- [https://soojin.ro/blog/uitableview-hype](https://soojin.ro/blog/uitableview-hype)
+- CompositionalLayout GIF 출처: [https://demian-develop.tistory.com/22?category=908651](https://demian-develop.tistory.com/22?category=908651)
+- [https://singularis7.tistory.com/104](https://singularis7.tistory.com/104)
 
 
 
