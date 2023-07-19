@@ -61,10 +61,60 @@ CompositionalFlowLayout은 이와 같은 레이아웃을 구성하기에 좋은 
 #### 2. UICollectionViewCompositionalLayout
 
 CollectionViewFlowLayout이 갖는 문제점을 해결하고자, iOS 13때 개발된 레이아웃이 바로 CollectionViewCompositionalLayout이다.
+<br>
 위에서 앱 스토어 에시를 다뤘듯이, 이 레이아웃은 복잡한 섹션을 구성하기에 적합한 레이아웃 방식이다. 
 
 
 ![CompositionalLayoutExample](https://github.com/Marigoldflower/CollectionView_CompositionLayout_Practice/assets/100112897/5eebf48e-8822-43db-b209-39414180084f)
+
+
+<br>
+
+위와 같은 복잡한 레이아웃을 구성하기 위해서 CollectionViewCompositionalLayout은 다음과 같이 구성되어 있다. 
+<br>
+
+1. item:
+<br>
+컬렉션 뷰를 이룰 때 쓰이는 한 개의 구성요소.
+<br>
+UICollectionViewCompositionalLayout에서 Item의 크기를 정하는 방법은 세 가지이며
+<br>
+Item을 생성할 때에는 NSCollectionLayoutItem(layoutSize:) 메소드를 사용한다.
+<br>
+layoutSize에는 각각의 Item의 크기를 정해줄 수 있는 NSCollectionLayoutSize(widthDimension:heightDimension:) 메소드가 들어가면 된다.
+
+1-1) .absolute
+	NSCollectionLayoutSize(widthDimension: .absolute(10), heightDimension: .absolute(10))
+	이런 방식으로 사용하며 고정 크기를 의미한다.
+	즉, 우리가 원래 사용하듯이 width 10, height 10을 의미하는 것임.
+
+1-2) .estimated
+	NSCollectionLayoutSize(widthDimension: .estimated(10), heightDimension: .estimated(10))
+	이런 방식으로 사용하며 대략적인 크기를 의미한다.
+	예를 들어 width를 일단 10으로 정해놓았지만 상황에 따라서 컴파일러가 크기를 약간 조절할 수 있다는 의미다.	
+
+1-3) .fractional
+	NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.4), heightDimension: .fractionalHeight(0.7))
+	이런 방식으로 사용하며 비율로 크기를 조정한다.
+	0 에서 1까지의 비율이 있는데 "1은 Item을 꽉 채우는 것을 의미한다." ⭐️
+	좀 더 쉽게 설명하자면 fractionalWidth(1)은 Item의 가로 부분을 꽉 채우겠다는 의미이고
+	fractionalHeight(1)은 Item의 세로 부분을 꽉 채우겠다는 의미이다.
+	예를 들어 fractionalWidth(0.5)는
+  "Item 반은 이미지 화면이 나오지만 반은 흰 공백 화면으로 나오는 것을 의미한다."
+	fractionalWidth(0.3)은
+	"Item의 30%만 이미지 화면이 나오고 70%는 흰 공백 화면으로 나오는 것을 의미한다."
+	
+Item끼리의 간격을 설정하기 위해서는 
+  item.contentInsets = NSDirectionalEdgeInsets(top:leading:bottom:trailing:)
+	메소드를 사용하면 된다.
+
+2. group
+<br>
+
+
+ 
+3. section
+
 
 
 
