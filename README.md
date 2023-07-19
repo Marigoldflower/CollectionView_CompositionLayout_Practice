@@ -56,7 +56,7 @@ CollectionViewFlowLayout은 모든 셀에 대하여 width값과 height값을 정
 
 <br>
 
-CollectionViewFlowLayout은 이와 같은 레이아웃을 구성하기에 좋은 선택지는 아니다.
+CollectionViewFlowLayout은 위와 같은 레이아웃을 구성하기에 좋은 선택지는 아니다.
 <br>
 CollectionViewFlowLayout은 각 섹션 별로 크기나 형태를 다르게 만들어주기가 까다롭고 어렵기 때문이다.
 
@@ -65,7 +65,7 @@ CollectionViewFlowLayout은 각 섹션 별로 크기나 형태를 다르게 만�
 
 ### 2. UICollectionViewCompositionalLayout
 
-위의 에시와 같이, CollectionViewFlowLayout이 갖는 문제점을 해결하고자, iOS 13때 개발된 레이아웃이 바로 CollectionViewCompositionalLayout이다.
+위의 예시와 같이, CollectionViewFlowLayout이 갖는 문제점을 해결하고자, iOS 13때 개발된 레이아웃이 바로 CollectionViewCompositionalLayout이다.
 <br>
 위에서 앱 스토어 에시를 다뤘듯이, 이 레이아웃은 복잡한 섹션을 구성하기에 적합한 레이아웃 방식이다. 
 
