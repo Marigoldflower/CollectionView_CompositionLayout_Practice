@@ -120,6 +120,7 @@ fractionalHeight(1)은 Item의 세로 부분을 꽉 채우겠다는 의미이다
 fractionalWidth(0.3)은 "Item의 30%만 이미지 화면이 나오고 70%는 흰 공백 화면으로 나오는 것을 의미한다."
 	
 
+<br>
 
 #### 2. group: Item을 모두 합쳐놓은 구성요소. 
 <br>
