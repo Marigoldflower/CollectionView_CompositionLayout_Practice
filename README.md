@@ -251,53 +251,10 @@ NSCollectionLayoutSection(group:) 메소드를 통해서 이제껏 만든 group�
 <br>
 위의 모든 내용을 코드로 옮기면 다음과 같다.
 
+<br>
 
-
-
-
-
-
-## TableView 사용의 단점  
-
-------------
-
-하지만 셀을 "재사용"하는 것은 TableView의 단점이기도 하다.  
-우선 사용했던 셀을 다음 줄에서도, 그 다음 줄에서도, 10번째 줄에서도 계속 똑같이 사용하기 때문에  
-각각의 셀의 구성이나 형태를 다르게 만들고자 할 때에는 TableView를 사용해서는 안 된다.
-
-그림을 통해 자세히 알아보자.  
-
-<img width="373" alt="스크린샷 2023-07-05 오후 5 54 50" src="https://github.com/Marigoldflower/ScrollView_TableView_Difference_Practice/assets/100112897/30ec76e7-1fc2-4afc-b79d-dcde7cd9a108">      
-  
-이미지, 두꺼운 폰트, 작은 글씨체의 셀이 계속 반복되는 것을 확인할 수 있다.  
-TableView는 사용했던 셀을 다시 재사용하기 때문에 셀의 형태와 구성은 동일하다.  
-
-반면에 다음과 같은 그림을 보자.
-
-<img width="373" alt="스크린샷 2023-07-05 오후 7 17 00" src="https://github.com/Marigoldflower/ScrollView_TableView_Difference_Practice/assets/100112897/63609605-030b-4092-8340-ed3a3e831ec9">
-
-
-
-위의 날씨 앱을 보면 각각의 구성요소가 모두 형태가 다른 것을 확인할 수 있다.  
-첫 번째 영역은 날씨 Label만 존재하고, 세 번째 영역은 여러 날씨 데이터를 가로로 스크롤하여 확인할 수 있게끔 되어있으며  
-네 번째 영역은 여러 날씨 데이터를 세로로 스크롤하여 확인할 수 있다.  
-따라서 위와 같은 날씨 앱은 셀을 재활용하는 방식을 채택한 것이 아닌 각각의 객체들이 서로 다른 형태를 띄도록 만들어준 것이다.  
-이 때 사용되는 방법이 바로 ScrollView와 StackView의 조합을 이용하는 것이다. 
-
-
-
-## ScrollView와 StackView의 조합
-
-------------
-
-
-ScrollView와 StackView를 조합하여 TableView와 같이 세로로 스크롤하게 만들되,  
-셀을 재활용하여 반복되는 셀을 사용하는 것이 아닌 각 객체의 구성요소가 서로 다르게끔 만들어줄 수 있다.  
-방법은 다음과 같다.  
-
-1. 먼저 스택 뷰에 올릴 뷰들을 생성한다.
-
-<img width="639" alt="스크린샷 2023-07-05 오후 6 47 20" src="https://github.com/Marigoldflower/ScrollView_TableView_Difference_Practice/assets/100112897/f0fdcc6f-1093-456d-88c7-e29be14bf32b">  
+1. 먼저 CollectionView를 메모리에 올린다. 이 때, CollectionViewLayout의 형태를 리턴값이 UICollectionViewCompositionalLayout인 메소드 makeCompositionalLayout()를 할당한다.
+<img width="639" alt="스크린샷 2023-07-05 오후 6 47 20" src="https://github.com/Marigoldflower/CollectionView_CompositionLayout_Practice/assets/100112897/f6bdb1ea-6209-44c1-a4fc-6b3d141ca282">  
 
 2. 스택 뷰를 올린다.
    
@@ -314,6 +271,8 @@ ScrollView와 StackView를 조합하여 TableView와 같이 세로로 스크롤�
 5. 그 후 아까 만들어 놓았던 UIView들을 스택 뷰에 차례대로 채워 넣으면 된다.
 
 <img width="639" alt="스크린샷 2023-07-05 오후 6 56 42" src="https://github.com/Marigoldflower/ScrollView_TableView_Difference_Practice/assets/100112897/8015f73d-600a-4e5b-86c1-cfd2d305f67b">
+
+
 
 
 ## 결과물 
