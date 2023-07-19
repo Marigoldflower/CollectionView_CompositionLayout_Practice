@@ -70,6 +70,10 @@ CollectionViewFlowLayout이 갖는 문제점을 해결하고자, iOS 13때 개�
 
 <br>
 
+## CollectionViewCompositionalLayout의 구성요소
+
+------------
+
 위와 같은 복잡한 레이아웃을 구성하기 위해서 CollectionViewCompositionalLayout은 다음과 같이 구성되어 있다. 
 <br>
 
