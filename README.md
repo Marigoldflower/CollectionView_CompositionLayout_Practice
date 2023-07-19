@@ -73,7 +73,7 @@ CollectionViewFlowLayout이 갖는 문제점을 해결하고자, iOS 13때 개�
 위와 같은 복잡한 레이아웃을 구성하기 위해서 CollectionViewCompositionalLayout은 다음과 같이 구성되어 있다. 
 <br>
 
-1. item: 컬렉션 뷰를 이룰 때 쓰이는 한 개의 구성요소.
+##### 1. item: 컬렉션 뷰를 이룰 때 쓰이는 한 개의 구성요소.
 <br>
 UICollectionViewCompositionalLayout에서 Item의 크기를 정하는 방법은 세 가지이며
 <br>
@@ -84,7 +84,7 @@ layoutSize에는 각각의 Item의 크기를 정해줄 수 있는 NSCollectionLa
 <br>
 <br>
 
-1-1) .absolute:
+###### 1-1) .absolute:
 
 NSCollectionLayoutSize(widthDimension: .absolute(10), heightDimension: .absolute(10))
 <br>
@@ -92,7 +92,7 @@ NSCollectionLayoutSize(widthDimension: .absolute(10), heightDimension: .absolute
 <br>
 즉, 우리가 원래 사용하듯이 width 10, height 10을 의미하는 것임.
 
-1-2) .estimated:
+###### 1-2) .estimated:
 
 NSCollectionLayoutSize(widthDimension: .estimated(10), heightDimension: .estimated(10))
 <br>
@@ -100,7 +100,7 @@ NSCollectionLayoutSize(widthDimension: .estimated(10), heightDimension: .estimat
 <br>
 예를 들어 width를 일단 10으로 정해놓았지만 상황에 따라서 컴파일러가 크기를 약간 조절할 수 있다는 의미다.	
 
-1-3) .fractional:
+###### 1-3) .fractional:
 
 
 NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.4), heightDimension: .fractionalHeight(0.7))
@@ -121,9 +121,70 @@ fractionalWidth(0.3)은 "Item의 30%만 이미지 화면이 나오고 70%는 흰
 	
 
 
-2. group
+##### 2. group: Item을 모두 합쳐놓은 구성요소. 
+<br>
+즉, Group은 여러 개의 Item들을 담고 있는 그릇이라고 생각하면 된다.
+<br>
+Group은 여러 개의 Item들을 어떤 방향으로 묶을지도 정해줘야 한다.
+<br>
+가로로 Item들을 묶을 때엔 .horizontal, 세로로 Item들을 묶을 때엔 .vertical을 사용한다.
+<br>
+Group을 생성할 때에는 두 가지 메소드로 또 나뉘게 된다. 
+
+<br>
 <br>
 
+
+1) NSCollectionLayoutGroup.horizontal(layoutSize:repeatingSubitem:count)
+	1-1) layoutSize: Group의 전체 크기를 정해줄 수 있는 
+	NSCollectionLayoutSize(widthDimension:heightDimension:) 메소드가 들어가면 된다.
+	1-2) subitem: 어떤 item이 들어갈 것인지. 보통 위에서 만들어 놓은 item을 여기에 할당한다.
+	한 Group 내에 몇 개의 item이 들어가는지에 따라서 subitem의 .fractional 영역을 조절해줘야 한다.
+  1-3) count: 몇 개의 item이 들어갈 것인지. 
+	예를 들어 4이라고 적으면 item 4개가 한 Group 안에 들어가게 된다.
+  따라서 한 Group 내에 Item 4개가 다 들어갈 수 있도록 
+  개발자가 임의로 Item들의 .fractional 영역을 조절해줘야 한다.
+	repeatingSubitem: count: 파라미터를 보통 사용하는 경우는 
+	똑같은 Item들이 반복되어 나열되어야 할 때 사용한다.
+	
+2) NSCollectionLayoutGroup.horizontal(layoutSize:subitems:)
+	2-1) layoutSize: Group의 전체 크기를 정해줄 수 있는 
+	NSCollectionLayoutSize(widthDimension:heightDimension:) 메소드가 들어가면 된다.
+	2-2) subitems: 어떤 item이 들어갈 것인지. 이건 똑같다.
+  다만 subitems 파라미터를 보통 사용하는 경우는 
+  Group 내에 또다른 Group을 커스텀하여 넣고 싶을 때 사용한다.
+
+	
+  ⭐️⭐️ 이 두 메소드를 사용할 때 주의할 점 ⭐️⭐️
+  "item들이 몇 개 들어가냐에 따라서 개발자가 ⭐️item⭐️의 .fractionalWidth를 조절해줘야 한다."
+  예를 들어 Group 내에 item을 두 개를 넣는다고 가정하면 
+	"item"의 .fractionalWidth는 반드시 0.5여야 한다. (0.5 + 0.5)로 Group을 채워야 하기 때문.
+  만일 Group 내에 item을 4개 넣는다고 가정하면 
+	"item"의 .fractionalWidth는 반드시 0.25여야 한다. (0.25 * 4)로 Group을 채워야 하기 때문.
+
+
+
+UICollectionViewCompositionalLayout에서 Group의 크기를 정하는 방법은 역시 세 가지이며
+layoutSize에는 NSCollectionLayoutSize(widthDimension:heightDimension:) 
+메소드가 들어가면 된다.
+
+	1-1) .absolute
+	NSCollectionLayoutSize(widthDimension: .absolute(10), heightDimension: .absolute(10))
+	이런 방식으로 사용하며 고정 크기를 의미한다.
+	즉, 우리가 원래 사용하듯이 width 10, height 10을 의미하는 것임.
+
+	1-2) .estimated
+	NSCollectionLayoutSize(widthDimension: .estimated(10), heightDimension: .estimated(10))
+	이런 방식으로 사용하며 대략적인 크기를 의미한다.
+	예를 들어 width를 일단 10으로 정해놓았지만 상황에 따라서 컴파일러가 크기를 약간 조절할 수 있다는 의미다.	
+
+	1-3) .fractional
+	NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.4), heightDimension: .fractionalHeight(0.7))
+	이런 방식으로 사용하며 비율로 크기를 조정한다.
+	0 에서 1까지의 비율이 있는데 "1은 Group이 화면을 꽉 채우는 것을 의미한다." ⭐️
+	예를 들어 fractionalWidth(1)은 Group의 가로를 꽉 채우는 것을 의미하며
+	fractionalWidth(0.3)은
+		"Group의 30%는 채우고 70%는 다른 Group으로 채우겠다는 의미이다."
 
  
 3. section
