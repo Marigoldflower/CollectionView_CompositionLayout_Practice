@@ -163,10 +163,14 @@ Group의 전체 크기를 정해줄 수 있는 NSCollectionLayoutSize(widthDimen
 	
 #### 2️⃣ NSCollectionLayoutGroup.horizontal(layoutSize:subitems:)
 
-##### 2-1) layoutSize: Group의 전체 크기를 정해줄 수 있는 NSCollectionLayoutSize(widthDimension:heightDimension:) 메소드가 들어가면 된다.
+##### 2-1) layoutSize: 
+
+Group의 전체 크기를 정해줄 수 있는 NSCollectionLayoutSize(widthDimension:heightDimension:) 메소드가 들어가면 된다.
 
 
-##### 2-2) subitems: 어떤 item이 들어갈 것인지. 이건 똑같다.
+##### 2-2) subitems: 
+
+어떤 item이 들어갈 것인지. 이건 똑같다.
 <br>
 다만 subitems 파라미터를 보통 사용하는 경우는 
 <br>
