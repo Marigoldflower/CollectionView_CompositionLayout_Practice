@@ -180,37 +180,42 @@ Group의 전체 크기를 정해줄 수 있는 NSCollectionLayoutSize(widthDimen
 <br>
 Group 내에 또다른 Group을 커스텀하여 넣고 싶을 때 사용한다.
 
+<br>
 	
 ⭐️⭐️ 이 두 메소드를 사용할 때 주의할 점 ⭐️⭐️
 "item들이 몇 개 들어가냐에 따라서 개발자가 ⭐️item⭐️의 .fractionalWidth를 조절해줘야 한다."
+<br>
 예를 들어 Group 내에 item을 두 개를 넣는다고 가정하면 
+<br>
 "item"의 .fractionalWidth는 반드시 0.5여야 한다. (0.5 + 0.5)로 Group을 채워야 하기 때문.
+<br>
 만일 Group 내에 item을 4개 넣는다고 가정하면 
+<br>
 "item"의 .fractionalWidth는 반드시 0.25여야 한다. (0.25 * 4)로 Group을 채워야 하기 때문.
 
-
+<br>
 
 UICollectionViewCompositionalLayout에서 Group의 크기를 정하는 방법은 역시 세 가지이며
-layoutSize에는 NSCollectionLayoutSize(widthDimension:heightDimension:) 
-메소드가 들어가면 된다.
+<br>
+layoutSize에는 NSCollectionLayoutSize(widthDimension:heightDimension:) 메소드가 들어가면 된다.
 
-	1-1) .absolute
-	NSCollectionLayoutSize(widthDimension: .absolute(10), heightDimension: .absolute(10))
-	이런 방식으로 사용하며 고정 크기를 의미한다.
-	즉, 우리가 원래 사용하듯이 width 10, height 10을 의미하는 것임.
+1-1) .absolute
+NSCollectionLayoutSize(widthDimension: .absolute(10), heightDimension: .absolute(10))
+이런 방식으로 사용하며 고정 크기를 의미한다.
+즉, 우리가 원래 사용하듯이 width 10, height 10을 의미하는 것임.
 
-	1-2) .estimated
-	NSCollectionLayoutSize(widthDimension: .estimated(10), heightDimension: .estimated(10))
-	이런 방식으로 사용하며 대략적인 크기를 의미한다.
-	예를 들어 width를 일단 10으로 정해놓았지만 상황에 따라서 컴파일러가 크기를 약간 조절할 수 있다는 의미다.	
+1-2) .estimated
+NSCollectionLayoutSize(widthDimension: .estimated(10), heightDimension: .estimated(10))
+이런 방식으로 사용하며 대략적인 크기를 의미한다.
+예를 들어 width를 일단 10으로 정해놓았지만 상황에 따라서 컴파일러가 크기를 약간 조절할 수 있다는 의미다.	
 
-	1-3) .fractional
-	NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.4), heightDimension: .fractionalHeight(0.7))
-	이런 방식으로 사용하며 비율로 크기를 조정한다.
-	0 에서 1까지의 비율이 있는데 "1은 Group이 화면을 꽉 채우는 것을 의미한다." ⭐️
-	예를 들어 fractionalWidth(1)은 Group의 가로를 꽉 채우는 것을 의미하며
-	fractionalWidth(0.3)은
-		"Group의 30%는 채우고 70%는 다른 Group으로 채우겠다는 의미이다."
+1-3) .fractional
+NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.4), heightDimension: .fractionalHeight(0.7))
+이런 방식으로 사용하며 비율로 크기를 조정한다.
+0 에서 1까지의 비율이 있는데 "1은 Group이 화면을 꽉 채우는 것을 의미한다." ⭐️
+예를 들어 fractionalWidth(1)은 Group의 가로를 꽉 채우는 것을 의미하며
+fractionalWidth(0.3)은
+"Group의 30%는 채우고 70%는 다른 Group으로 채우겠다는 의미이다."
 
  
 3. section
