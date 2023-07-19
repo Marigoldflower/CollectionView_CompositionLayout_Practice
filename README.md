@@ -92,25 +92,34 @@ NSCollectionLayoutSize(widthDimension: .absolute(10), heightDimension: .absolute
 <br>
 즉, 우리가 원래 사용하듯이 width 10, height 10을 의미하는 것임.
 
-1-2) .estimated
-	NSCollectionLayoutSize(widthDimension: .estimated(10), heightDimension: .estimated(10))
-	이런 방식으로 사용하며 대략적인 크기를 의미한다.
-	예를 들어 width를 일단 10으로 정해놓았지만 상황에 따라서 컴파일러가 크기를 약간 조절할 수 있다는 의미다.	
+1-2) .estimated:
 
-1-3) .fractional
-	NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.4), heightDimension: .fractionalHeight(0.7))
-	이런 방식으로 사용하며 비율로 크기를 조정한다.
-	0 에서 1까지의 비율이 있는데 "1은 Item을 꽉 채우는 것을 의미한다." ⭐️
-	좀 더 쉽게 설명하자면 fractionalWidth(1)은 Item의 가로 부분을 꽉 채우겠다는 의미이고
-	fractionalHeight(1)은 Item의 세로 부분을 꽉 채우겠다는 의미이다.
-	예를 들어 fractionalWidth(0.5)는
-  "Item 반은 이미지 화면이 나오지만 반은 흰 공백 화면으로 나오는 것을 의미한다."
-	fractionalWidth(0.3)은
-	"Item의 30%만 이미지 화면이 나오고 70%는 흰 공백 화면으로 나오는 것을 의미한다."
+NSCollectionLayoutSize(widthDimension: .estimated(10), heightDimension: .estimated(10))
+<br>
+이런 방식으로 사용하며 대략적인 크기를 의미한다.
+<br>
+예를 들어 width를 일단 10으로 정해놓았지만 상황에 따라서 컴파일러가 크기를 약간 조절할 수 있다는 의미다.	
+
+1-3) .fractional:
+
+
+NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.4), heightDimension: .fractionalHeight(0.7))
+<br>
+이런 방식으로 사용하며 비율로 크기를 조정한다.
+<br>
+0 에서 1까지의 비율이 있는데 "1은 Item을 꽉 채우는 것을 의미한다." ⭐️
+<br>
+좀 더 쉽게 설명하자면 fractionalWidth(1)은 Item의 가로 부분을 꽉 채우겠다는 의미이고
+<br>
+fractionalHeight(1)은 Item의 세로 부분을 꽉 채우겠다는 의미이다.
+<br.
+예를 들어 fractionalWidth(0.5)는
+<br>
+"Item 반은 이미지 화면이 나오지만 반은 흰 공백 화면으로 나오는 것을 의미한다."
+<br>
+fractionalWidth(0.3)은 "Item의 30%만 이미지 화면이 나오고 70%는 흰 공백 화면으로 나오는 것을 의미한다."
 	
-Item끼리의 간격을 설정하기 위해서는 
-  item.contentInsets = NSDirectionalEdgeInsets(top:leading:bottom:trailing:)
-	메소드를 사용하면 된다.
+
 
 2. group
 <br>
