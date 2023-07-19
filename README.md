@@ -34,10 +34,18 @@ CollectionViewFlowLayout은 모든 셀에 대하여 width값과 height값을 정
 (물론 width: 10 * Int.random(in: 5...10) , height: 10 * Int.random(in: 5...10) 이런 방식으로 각 셀의 크기를 다르게 해 줄 수는 있긴 하다.)
 
 
+가장 전통적인 방식의 CollectionViewLayout으로 애플은 웬만하면 이 Layout을 사용하기를 권장하고 있다.
+
 <br>
 
 #### 2. UICollectionViewCompositionalLayout
-이 CollectionViewLayout은 
+
+
+
+
+
+![CompositionalLayoutExample](https://github.com/Marigoldflower/CollectionView_CompositionLayout_Practice/assets/100112897/5eebf48e-8822-43db-b209-39414180084f)
+
 
 
 
