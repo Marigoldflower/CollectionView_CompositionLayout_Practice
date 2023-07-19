@@ -1,7 +1,7 @@
 # CollectionView_CompositionLayout_Practice
 <br>
 
-### CollectionViewLayout의 종류
+## CollectionViewLayout의 종류
 
 ------------
 
