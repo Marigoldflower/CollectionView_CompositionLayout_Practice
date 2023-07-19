@@ -156,11 +156,15 @@ Group을 생성할 때에는 두 가지 메소드로 또 나뉘게 된다.
 
 	
 ##### <2> NSCollectionLayoutGroup.horizontal(layoutSize:subitems:)
-	2-1) layoutSize: Group의 전체 크기를 정해줄 수 있는 
-	NSCollectionLayoutSize(widthDimension:heightDimension:) 메소드가 들어가면 된다.
-	2-2) subitems: 어떤 item이 들어갈 것인지. 이건 똑같다.
-  다만 subitems 파라미터를 보통 사용하는 경우는 
-  Group 내에 또다른 Group을 커스텀하여 넣고 싶을 때 사용한다.
+
+2-1) layoutSize: Group의 전체 크기를 정해줄 수 있는 NSCollectionLayoutSize(widthDimension:heightDimension:) 메소드가 들어가면 된다.
+
+
+2-2) subitems: 어떤 item이 들어갈 것인지. 이건 똑같다.
+<br>
+다만 subitems 파라미터를 보통 사용하는 경우는 
+<br>
+Group 내에 또다른 Group을 커스텀하여 넣고 싶을 때 사용한다.
 
 	
   ⭐️⭐️ 이 두 메소드를 사용할 때 주의할 점 ⭐️⭐️
