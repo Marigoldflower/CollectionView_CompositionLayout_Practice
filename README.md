@@ -282,7 +282,7 @@ NSCollectionLayoutSection(group:) 메소드를 통해서 이제껏 만든 group�
 
 ------------
 
-## 출처 
+## 출처 및 문서 참고
 
 - CompositionalLayout GIF 출처: [https://demian-develop.tistory.com/22?category=908651](https://demian-develop.tistory.com/22?category=908651)
 - [https://singularis7.tistory.com/104](https://singularis7.tistory.com/104)
