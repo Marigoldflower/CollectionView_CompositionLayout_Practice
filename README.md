@@ -38,7 +38,8 @@ CollectionViewFlowLayout은 모든 셀에 대하여 width값과 height값을 정
 
 <br>
 
-##### CollectionViewFlowLayout의 문제점 
+#### CollectionViewFlowLayout의 문제점 
+
 현대적인 앱의 레이아웃은 정말 복잡하다. 각 레이아웃의 크기나 모양이 전부 다 다르며 일정하지 않다. 
 앱 스토어 레이아웃과 같은 레이아웃을 보면 레이아웃의 구성이 전부 다 다른 것을 확인할 수 있다. 
 
