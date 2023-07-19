@@ -138,15 +138,21 @@ Group을 생성할 때에는 두 가지 메소드로 또 나뉘게 된다.
 
 ##### <1> NSCollectionLayoutGroup.horizontal(layoutSize:repeatingSubitem:count)
 
-1-1) layoutSize: Group의 전체 크기를 정해줄 수 있는 NSCollectionLayoutSize(widthDimension:heightDimension:) 메소드가 들어가면 된다.
+1-1) layoutSize: 
+
+Group의 전체 크기를 정해줄 수 있는 NSCollectionLayoutSize(widthDimension:heightDimension:) 메소드가 들어가면 된다.
 
 
-1-2) subitem: 어떤 item이 들어갈 것인지. 보통 위에서 만들어 놓은 item을 여기에 할당한다.
+1-2) subitem: 
+
+어떤 item이 들어갈 것인지. 보통 위에서 만들어 놓은 item을 여기에 할당한다.
 <br>
 한 Group 내에 몇 개의 item이 들어가는지에 따라서 subitem의 .fractional 영역을 조절해줘야 한다.
 
 
-1-3) count: 몇 개의 item이 들어갈 것인지. 
+1-3) count: 
+
+몇 개의 item이 들어갈 것인지. 
 <br>
 예를 들어 4이라고 적으면 item 4개가 한 Group 안에 들어가게 된다.
 <br>
