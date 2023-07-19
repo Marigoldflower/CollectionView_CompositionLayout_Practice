@@ -74,7 +74,6 @@ CollectionViewFlowLayout이 갖는 문제점을 해결하고자, iOS 13때 개�
 <br>
 
 1. item:
-<br>
 컬렉션 뷰를 이룰 때 쓰이는 한 개의 구성요소.
 <br>
 UICollectionViewCompositionalLayout에서 Item의 크기를 정하는 방법은 세 가지이며
